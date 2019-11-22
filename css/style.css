@@ -604,7 +604,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  background: #00b8a9;
+  background-color: rgba(246, 65, 108, 0.7);
 }
 
 footer>p {
@@ -616,7 +616,7 @@ footer i {
 }
 
 .footer-text {
-  color: #f6416c;
+  color: black;
   font-size: 2rem;
 }
 
