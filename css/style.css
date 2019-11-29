@@ -147,9 +147,8 @@ body {
     transform: rotate(360deg);
   }
 }
+
 /* ending unversal styles */
-
-
 /* starting landing page styles */
 /* starting navbar styles */
 .nav {
@@ -189,18 +188,19 @@ a {
   display: block;
   font-size: 2.2rem;
   padding: 2rem;
+  transition: color 0.3s;
 }
 
 .nav-list a:hover {
-  color: rgba(82, 37, 70, 0.8);
-  text-decoration: underline;
+  color: rgba(246, 65, 108, 1);
+  font-size: 2.3rem;
 }
-/* ending navbar styles */
 
+/* ending navbar styles */
 /* startiing landing page section */
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(255, 222, 125, 0.5), rgba(246, 65, 108, 0.5)), url('../img/future-city.gif');
+  background-image: linear-gradient(to right bottom, rgba(255, 222, 125, 0.5), rgba(246, 65, 108, 0.5)), url('../img/future-city-min.gif');
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 92vh, 0 100%);
@@ -357,13 +357,10 @@ a {
 }
 
 /* endinfg universal styles */
-
-
 /* starting about section  */
-
 .section-about {
   background-color: #f7f7f7;
-  padding: 15vh 0 20vh 0;
+  padding: 15vh 0 25vh 0;
   margin-top: -7vh;
 }
 
@@ -374,31 +371,155 @@ a {
 }
 
 .about-grid {
-  padding: 0 5vw 0 5vw;
+  padding: 0 8vw 0 12vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-row-gap: 5vw;
+  grid-row-gap: 0vw;
   justify-content: space-evenly;
 }
-.tech-image{
+.about-item{
+  text-align: center;
+}
+.tech-cube {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   object-fit: scale-down;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
 }
-.responsive-image{
-  max-width: 15vw;
-  max-height: 15vw;
+@media (max-width: 768px){
+  .tech-cube{
+    margin-top: 10vh;
+  }
 }
-@media(max-width: 800px){
-  .responsive-image{
-    max-width: 25vw;
-    max-height: 25vw;
+.cube {
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+}
+
+.cube>div {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  border: solid 3px #f6416c;
+}
+
+.front {
+  transform: translateZ(100px);
+  display: flex;
+  align-items: center;
+}
+
+.front>img {
+  width: 150px;
+}
+
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+  display: flex;
+  align-items: center;
+}
+
+.back>img {
+  width: 150px;
+}
+
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.right>img {
+  width: 150px;
+}
+
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+  display: flex;
+  align-items: center;
+}
+
+.left>img {
+  width: 150px;
+}
+
+.top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+  display: flex;
+  align-items: center;
+}
+
+.top>img {
+  width: 150px;
+}
+
+.bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+  display: flex;
+  align-items: center;
+}
+
+.bottom>img {
+  width: 150px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
   }
 }
 
-/* ending about section */
+.cube {
+  animation: rotate 10s infinite linear;
+}
 
+/* adding hover effect */
+.tech-cube:hover .front {
+  transform: translateZ(200px);
+}
+
+.tech-cube:hover .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+
+.tech-cube:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+
+.tech-cube:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+
+.tech-cube:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+
+.tech-cube:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+
+.cube>div {
+  transition: transform 0.2s ease-in;
+}
+
+/* ending about section */
 /* starting skill section */
 .section-features {
   height: auto;
@@ -439,8 +560,9 @@ a {
 .grid-item {
   width: 0.8fr;
 }
-@media(max-width: 450px){
-  .skills{
+
+@media(max-width: 450px) {
+  .skills {
     padding-top: -10vh;
   }
 }
@@ -550,8 +672,6 @@ a {
 .feature-box * {
   list-style: none;
 }
-
-
 
 /* Contact section */
 .contact-section {
