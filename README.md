@@ -2,15 +2,15 @@
 This is my portfolio completely made with html & css.
 I use newest css feature in this site. Here is some of them:
 
-    1.CSS grid
+    1.CSS Grid
 
-    2.CSS flexbox
+    2.CSS Flexbox
 
-    3.CSS transition
+    3.CSS Fransition
 
-    4.3D animation
+    4.3D Animation
 
-    5.Responsive & good looking in every device
+    5.Responsiveness & good look in every device
 
 
 This site is live here https://nasimuddin.netlify.com/
