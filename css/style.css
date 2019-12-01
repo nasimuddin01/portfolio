@@ -414,6 +414,7 @@ a {
   height: 100%;
   width: 100%;
   border: solid 3px #f6416c;
+  background-color: rgba(249, 243, 237, 0.7)
 }
 
 .front {
@@ -537,7 +538,7 @@ a {
 }
 
 .skills {
-  padding-bottom: 8rem;
+  margin-bottom: 8rem;
   text-align: center !important;
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -552,7 +553,7 @@ a {
   transform: skewY(3.6deg);
 }
 .skills:hover{
-  transform: skewX(3deg);
+  transform: skewX(2deg) skewY(5deg);
   text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
 }
 .grid {
@@ -723,7 +724,11 @@ a {
   grid-template-columns: 1fr;
   align-items: center;
 }
-
+@media(max-width: 500px){
+  form{
+    padding-bottom: 3rem;
+  }
+}
 .contact-links {
   display: grid;
   grid-template-columns: 1fr;
@@ -766,12 +771,16 @@ textarea {
   max-width: 100%;
   resize: none;
 }
-
+@media(max-width: 768px){
+  textarea{
+    height: 60px;
+  }
+}
 button[type="submit"] {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: linear-gradient(to right bottom, rgba(255, 222, 125, 1), rgba(246, 65, 108, 1));
+  background: linear-gradient(to right bottom, #05C491, #03AD7D);
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
@@ -779,10 +788,10 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background: #09C;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  background: linear-gradient(to right bottom, #FDCE00, #EAAA00);
+  -webkit-transition: background 0.5s linear;
+  -moz-transition: background 0.5s linear;
+  transition: background-color 0.5s linear;
 }
 
 button[type="submit"]:active {
@@ -798,8 +807,9 @@ input:focus, textarea:focus {
 footer {
   font-weight: 300;
   padding: 4rem;
-  background-color: #BBCDF9;
+  background: linear-gradient(to right bottom, #BBCDF9, #9ACDFF);
   text-align: center;
+
 }
 
 .foot {
@@ -813,9 +823,11 @@ footer {
 footer>p {
   margin: 2rem;
 }
-
+.form > div > p{
+  padding-bottom: 1rem;
+}
 .links>a {
-  color: black;
+  color: #23303B;
   padding: 10px;
   font-size: 2rem;
 }
@@ -825,7 +837,7 @@ footer>p {
 }
 
 .footer-text {
-  color: black;
+  color: #23303B;
   font-size: 1.5rem;
 }
 
@@ -848,10 +860,10 @@ footer>p {
 }
 
 .back-to-top {
-  padding: 1.2rem;
+  padding: 0.6rem 1.2rem;
   /* border: 1px solid #FA7F73; */
   background-color: #F9F3ED;
-  color: #F7546D;
+  color: #23303B;
   font-size: 1.5rem;
   font-weight: 400;
   border-radius: 25px;
