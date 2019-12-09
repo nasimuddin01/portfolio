@@ -207,7 +207,7 @@ a {
 /* startiing landing page section */
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(255, 222, 125, 0.5), rgba(246, 65, 108, 0.5)), url('../img/future-city-min.gif');
+  background-image: linear-gradient(to right bottom, rgba(255, 222, 125, 0.5), rgba(246, 65, 108, 0.5)), url('../img/future-city.gif');
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 92vh, 0 100%);
