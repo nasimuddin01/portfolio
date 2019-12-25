@@ -207,7 +207,7 @@ a {
 /* startiing landing page section */
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(255, 222, 125, 0.5), rgba(246, 65, 108, 0.5)), url('../img/future-city.gif');
+  background-image: linear-gradient(to right bottom, rgba(255, 222, 125, 0.3), rgba(246, 65, 108, 0.3)), url('../img/cyberpunk.gif');
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 92vh, 0 100%);
@@ -538,14 +538,14 @@ a {
 .section-features {
   height: auto;
   padding: 10vh 0 10vh 0;
-  background-image: linear-gradient(to right bottom, rgba(246, 65, 108, 0.4), rgba(255, 222, 125, 0.4)), url(../img/cyberpunk.gif);
+  background-image: linear-gradient(to right bottom, rgba(246, 65, 108, 0.7), rgba(255, 222, 125, 0.7)), url(../img/cyberpunk.jpg);
   background-size: cover;
   transform: skewY(-3.6deg);
   align-items: center;
 }
 
 .skills {
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
   text-align: center !important;
   font-size: 3.5rem;
   text-transform: uppercase;

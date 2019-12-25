@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Portfolio Site of Muhammad Nasim Uddin. He is a front end developer & designer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
@@ -36,7 +37,7 @@
         <span class="heading-primary--main">Nasim Uddin</span>
         <span class="heading-primary--sub">Front End Developer</span>
       </h1>
-      <a href="#projects" class="btn btn--white btn--animated smooth-goto">See Projects</a>
+      <a href="#projects" class="btn btn--white">See Projects</a>
     </div>
   </header>
 
@@ -250,13 +251,13 @@
             <p>Please don't hesitate to contact.</p>
             <form name="contact" method="POST" data-netlify="true">
               <p>
-                <input placeholder="Your name" type="text" name="name" tabindex="1" required>
+                <input placeholder="Your name" type="text" name="name" tabindex="0" required>
               </p>
               <p>
-                <input placeholder="Your Email Address" type="email" name="email" tabindex="2" required>
+                <input placeholder="Your Email Address" type="email" name="email" tabindex="-1" required>
               </p>
               <p>
-                <textarea placeholder="Type your Message Here...." tabindex="3" name="message" required></textarea>
+                <textarea placeholder="Type your Message Here...." tabindex="-2" name="message" required></textarea>
               </p>
               <p>
                 <button name="submit" type="submit" data-submit="...Sending">Submit</button>
