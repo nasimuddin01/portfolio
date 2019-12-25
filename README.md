@@ -6,7 +6,7 @@ I use newest css feature in this site. Here is some of them:
 
     2.CSS Flexbox
 
-    3.CSS Fransition
+    3.CSS Transition
 
     4.3D Animation
 
